@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <title>Dummy HTML</title>
+    <style>
+        #display {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Dummy HTML Page</h1>
+    <p>This is the first paragraph. It contains some sample text to demonstrate a paragraph in HTML.</p>
+    <p>This is the second paragraph. It also contains some sample text to show how multiple paragraphs are displayed.</p>
+    <p>This is the third paragraph. It serves as another example of a paragraph in an HTML document.</p>
+    
+    <button onclick="displayMessage()">Click Me</button>
+    <div id="display"></div>
+
+    <script>
+        let clickCount = 0;
+        function displayMessage() {
+            clickCount++;
+            document.getElementById('display').innerText = 'Button was clicked ' + clickCount + ' times!';
+        }
+    </script>
+    <script type='text/javascript'>
+        function initEmbeddedMessaging() {
+            try {
+                embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+    
+                embeddedservice_bootstrap.init(
+                    '00DHr000009zkBr',
+                    'Community_Portal_Chat',
+                    'https://exaagentforce-dev-ed.develop.my.site.com/ESWCommunityPortalChat1732000726156',
+                    {
+                        scrt2URL: 'https://exaagentforce-dev-ed.develop.my.salesforce-scrt.com'
+                    }
+                );
+            } catch (err) {
+                console.error('Error loading Embedded Messaging: ', err);
+            }
+        };
+    </script>
+    <script type='text/javascript' src='https://exaagentforce-dev-ed.develop.my.site.com/ESWCommunityPortalChat1732000726156/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    
+</body>
+</html>
